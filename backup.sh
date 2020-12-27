@@ -23,7 +23,7 @@ echo -e "${amare}BEM-VINDO, escolha a pasta ou arquivo que quer fazer o backup p
 echo -e "${amare}Local da pasta/arquivos a ser guardado? $ficol"
 	while : ; do
 read -p "Digite o local: " dir_bk
-	if [[ -d $dir_bk ]]
+	if [[ -r $dir_bk ]]
 	then
 	cd $dir_bk ; echo -e "${verd} Listando arquivos... ${ficol}" ; sleep 1s ; ls --color 
 	break	
